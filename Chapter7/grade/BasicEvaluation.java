@@ -4,10 +4,9 @@ public class BasicEvaluation implements GradeEvaluation{
 
 	@Override
 	public String getGrade(int point) {
-		
 		String grade;
 		
-		if(point >=90 && point <= 100)
+		if(point >= 90 && point <= 100)
 			grade = "A";
 		else if(point >=80 && point <=89)
 			grade = "B";

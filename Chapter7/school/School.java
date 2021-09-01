@@ -3,40 +3,23 @@ package school;
 import java.util.ArrayList;
 
 public class School {
-	
 	// 싱글톤 패턴
 	private static School instance = new School();
 	
-	private ArrayList<Student> studentList = new ArrayList<>();
-	private ArrayList<Subject> subjectList = new ArrayList<>();
+	private static String SCHOOL_NAME = "Good School";
+	private ArrayList<Student> studentList = new ArrayList<Student>();
+	private ArrayList<Subject> subjectList = new ArrayList<Subject>();
 	
-	
-	public ArrayList<Student> getStudentList() {
-		return studentList;
-	}
-	private School() {}
-	
+	private School() {} // 생성못하게 private 으로 작성!
+
 	public static School getInstance() {
-		if( instance == null)
+		if(instance == null)
 			instance = new School();
-		
 		return instance;
 	}
 
-	public void setStudentList(ArrayList<Student> studentList) {
-		this.studentList = studentList;
-	}
-
-	public ArrayList<Subject> getSubjectList() {
-		return subjectList;
-	}
-
-	public void setSubjectList(ArrayList<Subject> subjectList) {
-		this.subjectList = subjectList;
-	}
-
-	public static void setInstance(School instance) {
-		School.instance = instance;
+	public ArrayList<Student> getStudentList() {
+		return studentList;
 	}
 	
 	public void addStudent(Student student) {
@@ -47,4 +30,11 @@ public class School {
 		subjectList.add(subject);
 	}
 	
+	public ArrayList<Subject> getSubjectList() {
+		return subjectList;
+	}
+
+	public void setSubjectList(ArrayList<Subject> subjectList) {
+		this.subjectList = subjectList;
+	}
 }

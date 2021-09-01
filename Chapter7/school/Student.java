@@ -2,17 +2,16 @@ package school;
 
 import java.util.ArrayList;
 
-import javax.security.auth.Subject;
-
 public class Student {
-
+	
 	private int studentId;
 	private String studentName;
 	private Subject majorSubject;
 	
-	private ArrayList<Score> scoreList = new ArrayList<>();
 	
-	public Student(int studentId, String studentName, Subject majorSubject) {
+	private ArrayList<Score> scoreList = new ArrayList<Score>();
+	
+	public Student ( int studentId, String studentName, Subject majorSubject) {
 		this.studentId = studentId;
 		this.studentName = studentName;
 		this.majorSubject = majorSubject;

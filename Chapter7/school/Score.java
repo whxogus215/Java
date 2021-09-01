@@ -1,16 +1,17 @@
 package school;
 
 public class Score {
-	int studentId;
-	Subject subject;
-	int point;
+	
+	private int studentId;
+	private Subject subject;
+	private int point;
 	
 	public Score(int studentId, Subject subject, int point) {
 		this.studentId = studentId;
 		this.subject = subject;
 		this.point = point;
 	}
-
+	
 	public int getStudentId() {
 		return studentId;
 	}
@@ -33,6 +34,10 @@ public class Score {
 
 	public void setPoint(int point) {
 		this.point = point;
+	}
+	
+	public String toString() {
+		return "ÇÐ¹ø : " + studentId + "," + subject.getSubjectName() + " : " + point;
 	}
 	
 }

@@ -5,16 +5,17 @@ import java.util.ArrayList;
 import utils.Define;
 
 public class Subject {
+	
 	private String subjectName;
 	private int subjectId;
 	private int gradeType;
 	
-	private ArrayList<Student> studentList = new ArrayList<>();
+	private ArrayList<Student> studentList = new ArrayList<Student>();
 	
 	public Subject(String subjectName, int subjectId) {
 		this.subjectName = subjectName;
 		this.subjectId = subjectId;
-		this.gradeType = Define.AB_TYPE; // Defalut; 기본적으로는 A,B 학점 제도(TYPE)
+		this.gradeType = Define.AB_TYPE;
 	}
 
 	public String getSubjectName() {
@@ -49,7 +50,9 @@ public class Subject {
 		this.studentList = studentList;
 	}
 	
-	public void register(Student student) { // 수강신청
+	// 수강신청
+	public void register(Student student) {
 		studentList.add(student);
 	}
+
 }
